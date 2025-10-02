@@ -8,8 +8,8 @@ urlpatterns = [
 ]
 
 urlpatterns += [
-    path("login/", views.CustomLoginView.as_view(), name="login"),
-    path("logout/", views.CustomLogoutView.as_view(), name="logout"),
+    path("login/", LoginView.as_view(template_name="login"),
+    path("logout/", LogoutView.as_view(template_name="logout"),
     path("register/", views.register, name="register"),
 ]
 

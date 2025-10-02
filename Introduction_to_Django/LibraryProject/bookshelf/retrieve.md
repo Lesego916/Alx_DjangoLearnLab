@@ -5,7 +5,7 @@ Open shell:
 Retrieve created book(s):
 ```py
 from bookshelf.models import Book
-books = Book.objects.all()
+books = Book.objects.get()
 for book in books:
     print(book.title, book.author, book.publication_year)
 # Expected output (example): 1984 George Orwell 1949

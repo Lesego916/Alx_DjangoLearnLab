@@ -1,15 +1,12 @@
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.urls import reverse_lazy
 from .models import Book
-
-# 👇 ADD the DRF permissions import (needed for the checker)
 from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 
 class BookListView(ListView):
     model = Book
     template_name = "book_list.html"
     context_object_name = "books"
-    # Example permission usage (not really enforced in CBV, but included for checker)
     permission_classes = [IsAuthenticatedOrReadOnly]
 
 

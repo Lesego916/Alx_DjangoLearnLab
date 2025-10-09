@@ -1,6 +1,6 @@
 from rest_framework import generics, filters
 from django_filters import rest_framework
-from rest_framework.permissions import IsAuthenticatedOrReadOnly
+from rest_framework.permissions import IsAuthenticatedOrReadOnly, IsAuthenticated
 from .models import Book
 from .serializers import BookSerializer
 
